@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSCARS Training Tiers – Project Detail</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#f3f0f8;color:#2d2040;line-height:1.55}
+
+/* PAGE HEADER */
+.page-header{background:linear-gradient(135deg,#37277c,#4463A0);color:#fff;padding:40px 48px 36px}
+.page-header .eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-bottom:8px}
+.page-header h1{font-size:2rem;font-weight:800;margin-bottom:10px}
+.page-header .subtitle{font-size:1rem;opacity:.85;max-width:680px;margin-bottom:20px}
+.header-stats{display:flex;gap:32px;flex-wrap:wrap}
+.hstat{background:rgba(255,255,255,.12);border-radius:10px;padding:12px 20px;text-align:center}
+.hstat .num{font-size:1.7rem;font-weight:800;line-height:1}
+.hstat .lbl{font-size:11px;opacity:.8;margin-top:4px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+
+/* OVERLAP NOTE */
+.overlap-note{background:#ede8f5;border-left:4px solid #80519a;padding:12px 20px;margin:24px 40px 0;border-radius:0 8px 8px 0;font-size:.875rem;color:#37277c}
+
+/* TIER SECTIONS */
+.tier-section{margin:32px 40px}
+.tier-header{color:#fff;border-radius:12px 12px 0 0;padding:20px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.tier-tag{background:rgba(255,255,255,.2);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:700;letter-spacing:.08em;white-space:nowrap}
+.tier-name{font-size:1.1rem;font-weight:700;flex:1;min-width:160px}
+.tier-desc{font-size:.85rem;opacity:.85;flex:2;min-width:200px}
+.tier-count{background:rgba(255,255,255,.25);border-radius:20px;padding:4px 14px;font-size:.9rem;font-weight:700;white-space:nowrap}
+
+/* PROJECT GRID */
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;background:#fff;padding:16px;border-radius:0 0 12px 12px;border:1px solid #e0d8f0;border-top:none}
+.proj-card{background:#faf8ff;border:1px solid #e8e2f5;border-radius:10px;padding:14px 16px}
+.proj-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.proj-id{background:#37277c;color:#fff;border-radius:5px;padding:2px 8px;font-size:.7rem;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.cluster-pill{color:#fff;border-radius:5px;padding:2px 8px;font-size:.65rem;font-weight:600;white-space:nowrap;max-width:140px;overflow:hidden;text-overflow:ellipsis}
+.proj-title{font-size:.85rem;font-weight:700;color:#2d2040;margin-bottom:8px;line-height:1.3}
+.proj-card ul{padding-left:16px}
+.proj-card li{font-size:.78rem;color:#4a3c6e;margin-bottom:4px;line-height:1.4}
+.proj-card li a{color:#37277c;word-break:break-all}
+.tag{display:inline-block;background:#ede8f5;color:#37277c;border-radius:4px;padding:0 5px;font-size:.66rem;font-weight:700;margin-left:4px}
+.hstat .sub{font-size:12px;margin-top:6px;font-weight:700;opacity:.95;border-top:1px solid rgba(255,255,255,.3);padding-top:5px}
+.method{font-size:.8rem;color:#4a3c6e;margin:8px 40px 0}
+.method p{margin-top:6px}
+.note{font-size:.72rem;color:#7f7f80;font-style:italic;margin-top:2px}
+.no-bullet{font-size:.78rem;color:#7f7f80;font-style:italic}
+
+/* FOOTER */
+footer{text-align:center;padding:32px;font-size:.8rem;color:#7f7f80;border-top:1px solid #e0d8f0;margin-top:16px}
+
+@media(max-width:700px){
+  .tier-section{margin:16px 8px}
+  .proj-grid{grid-template-columns:1fr}
+  .page-header{padding:24px 20px}
+  .overlap-note{margin:16px 8px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">OSCARS Horizon Europe · October 2026</div>
+  <h1>Training and engagement tiers</h1>
+  <p class="subtitle">Projects contributing to training events, learning materials, and capacity building across the five Science Clusters.</p>
+  <div class="header-stats">
+    <div class="hstat"><div class="num">70</div><div class="lbl">Funded projects</div></div>
+    <div class="hstat"><div class="num">59</div><div class="lbl">with training contributions</div></div>
+    <div class="hstat"><div class="num">26</div><div class="lbl">Tier 1 – projects</div><div class="sub">48 training events</div></div>
+    <div class="hstat"><div class="num">19</div><div class="lbl">Tier 2 – projects</div><div class="sub">29 learning materials</div></div>
+    <div class="hstat"><div class="num">54</div><div class="lbl">Tier 3 – projects</div><div class="sub">capacity building</div></div>
+  </div>
+</div>
+
+<div class="overlap-note">
+  Tiers are not mutually exclusive: a single project may appear in more than one tier. 10 projects are in all three tiers.
+</div>
+<div class="method">
+  <p><strong>Tier 1</strong>: the project organised a training event (workshop, webinar, school, hackathon, course) or taught a session at another organisation's training event. Co-design meetings, focus groups, feedback workshops and talks at other events are not counted. Items marked with a note reflect decisions recorded on 5 October 2026.</p>
+  <p><strong>Tier 2</strong>: learning materials produced by the project (tutorials, guides, textbooks, recorded lectures, teaching notebooks), including end-user guides and manuals, which remain listed as Technical Documentation in the results portfolio. A webinar's recording counts here while the webinar itself counts in Tier 1. Slides of project presentations are not counted.</p>
+  <p><strong>Tier 3</strong>: the project reports new skills or capacities built within its team or community (final survey).</p>
+</div>
+
+<section class="tier-section">
+  <div class="tier-header" style="background:linear-gradient(135deg,#37277c,#4463A0)">
+    <div class="tier-tag">TIER 1</div>
+    <div class="tier-name">Tier 1 – Training events</div>
+    <div class="tier-desc">Workshops, webinars, schools, hackathons and courses organised or taught by the project</div>
+    <div class="tier-count">26 projects · 48 events</div>
+  </div>
+  <div class="proj-grid"><div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-008</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">NAPMIX - Nuclear, Astro, and Particle Metadata Integration for eXperiments</div>
+  <ul><li>Hands-on workshop and collaborative training on cross-domain metadata modelling, schema design, and FAIR metadata interoperability, including practical demonstrations of the NAPMIX metadata portal and schema implementation. <a href="https://indico.gsi.de/event/24553/" target="_blank" rel="noopener">link</a><div class="note">Reported in D4.4 Impact Report; no separate event record</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-055</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, LS-RI)">ENVRI / LS-RI</span>
+  </div>
+  <div class="proj-title">RISKY - Wildlife Mortality from Energy and Transport Infrastructure</div>
+  <ul><li>Organised one international webinar to advance global wildlife mortality data sharing and high-quality datasets for biodiversity conservation and infrastructure planning. <a href="https://www.youtube.com/watch?v=KYI1YWhXzgI" target="_blank" rel="noopener">link</a><div class="note">Reported in D4.4 Impact Report; no separate event record</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-063</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">ONTOLISST - Thematic ontologies in social science research data</div>
+  <ul><li>Webinar Artificial Intelligence and metadata in social science (10 February, 2025, Online) <a href="https://www.sciencespo.fr/cdsp/fr/evenements/webinaire-intelligence-artificielle-et-metadonnees-en-shs/" target="_blank" rel="noopener">link</a></li><li>Workshop Café de la donnée CDSP organised by ONTOLISST at Sciences Po Paris on generating thematic metadata with AI. (25 September, 2025, Paris, France)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-069</span>
+    <span class="cluster-pill" style="background:#4463A0" title="Cross-Domain (ESCAPE, Other)">ESCAPE / Other</span>
+  </div>
+  <div class="proj-title">Astro-CC - Astronomy Open Science Competence Centre Pilot</div>
+  <ul><li>First Astro-CC Training event - The goal of the Astro-CC project is to enable members of the astronomy, heliospheric physics, planetary science, and astro-particle physics communities to accelerate the use of Open Science by supporting the implementation of FAIR principles. The Virtual Observatory (VO) is opening up new ways of exploiting the huge amount of data provided by the ever-growing number of ground-based and space facilities, as well as by computer simulations. The goal of this Training Event has been twofold: to expose participants to the variety of VO tools and services available today so that they can use them efficiently for their own research; and to gather requirements and feedback from participants. To achieve these goals, VO experts lectured and tutored the participants on the usage of VO tools and services. Real life examples of scientific applications will be given. A large fraction of the time will be dedicated to hands-on exercises, which will allow participants to become fully familiar with the VO capabilities on their own laptops. (2-4 December 2025, Madrid, Spain) <a href="https://indico.in2p3.fr/event/36738/" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-073</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE, LS-RI)">ENVRI / ESCAPE+</span>
+  </div>
+  <div class="proj-title">FIESTA - FAIR image analysis across sciences</div>
+  <ul><li>Hackathon Image Analysis in Galaxy (22-26 April 2025, Freiburg, Germany) <a href="https://galaxyproject.org/events/2025-04-22-galaxy-imaging-hackathon/" target="_blank" rel="noopener">link</a></li><li>EOSC Academy - Presentation in Course 3: Use cases for the EOSC Federation (24.06.2026, Online) <a href="https://eosc.eu/academy/course-3-use-cases-for-the-eosc-federation" target="_blank" rel="noopener">link</a><span class="tag">taught a session</span></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-076</span>
+    <span class="cluster-pill" style="background:#37277c" title="Cross-Domain (PaNOSC, Other)">PaNOSC / Other</span>
+  </div>
+  <div class="proj-title">Findable Big Data from Various Material Characterisation Techniques</div>
+  <ul><li>Infineon Winter School - Talk on &quot;Open and FAIR Experimental Data Management&quot; (5 February 2025, online)<span class="tag">taught a session</span></li><li>NeXus workshop on the NeXus data format and its use at HZB (2 April 2025, Berlin, Germany)</li><li>Ontology Workshop with review of XAS data at ESRF (25 February 2026, Grenoble, France)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-080</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">COPLI - Creating a FAIR Open Science Pipeline for high-resolution LOFAR Imaging</div>
+  <ul><li>Hackathon organised by the COPLI project to work with experts on improving the au[tomation] (6 May - 8 May, 2025)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-163</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE, LS-RI, PaNOSC, Other)">ENVRI / ESCAPE+</span>
+  </div>
+  <div class="proj-title">HiMAGNETOS - High Magnetic Field Open Science</div>
+  <ul><li>The main software developed in the HiMAGNETOS project attended the S³ School - Sustainable Scientific Software School of OSCARS / EOSC EVERSE (14–21 January 2026, Annecy, France)<span class="tag">taught a session</span></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-168</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">PNU-OpenLab - Advanced Materials Open Science Centre at the Precarpathian National University</div>
+  <ul><li>Workshop ‘Open Science and FAIR: Global strategies for accessibility, interoperability and information security. Presentation of the institutional repository developed at Vasyl Stefanyk Precarpathian National University - dataset.pnu.edu.ua (16 May, 2025, Ivano-Frankivsk) <a href="https://open-lab.pnu.edu.ua/en/2025/05/16/workshop-open-science-and-fair-global-strategies-for-accessibility-interoperability-and-information-security/" target="_blank" rel="noopener">link</a></li><li>Informational Webinar - Presentation of DataSet functionality for PNU employees (25 June 2025, Ivano-Frankivsk and online) <a href="https://open-lab.pnu.edu.ua/en/2025/06/28/informational-webinar/" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-177</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE, LS-RI, PaNOSC, SSHOC, Other)">ENVRI / ESCAPE+</span>
+  </div>
+  <div class="proj-title">OSPARK - Open Science Promotion and Advocacy for Research Knowledge Bootcamp</div>
+  <ul><li>Open Science Retreat 2025 (13-17 April, 2025, Beatenberg, Switzerland) <a href="https://events.digital-research.academy/event/47/overview" target="_blank" rel="noopener">link</a></li><li>Effective Podcasting with NFDI4Health Workshop (17-18 August, 2025, Cologne, Germany) <a href="https://docs.google.com/document/d/1qWcZ2ggUZyqKCDXqZlkmpdZckd1zcfg5FcEhPmSosoo/edit?tab=t.0#heading=h.l99omo7xo0us" target="_blank" rel="noopener">link</a></li><li>OSPARK Workshop &quot;Promote Your Initiative or Service&quot; for Research Support Services and Open Science Initiatives (29 August 2025, Aachen, Germany) <a href="https://zenodo.org/records/17097990" target="_blank" rel="noopener">link</a></li><li>The OSPARK Bootcamp project developed, publicised, and administered the OSPARK email course piloting key OSPARK training material. (18 September - 30 October 2025, Online) <a href="https://oscars-project.eu/events/ospark-email-course-open-science-menu-how-get-visibility-your-open-science-initiative" target="_blank" rel="noopener">link</a></li><li>OSPARK Bootcamp #1 hybrid training programme (5 March - 24 April 2026, Online and in-person in Belfast, Northern Ireland) <a href="https://events.digital-research.academy/event/116/" target="_blank" rel="noopener">link</a><div class="note">Bootcamp edition 1 of 3</div></li><li>First research workshop, to present condensed (60-minute) training material and collect data for Study 1 of the OSPARK research programme through a focus group segment. The data will be used to develop the training programme according to user needs. (26 March 2026, Online)<div class="note">Includes a focus-group segment; counted as training by decision of 5 Oct 2026</div></li><li>Open Science Retreat 2026 - Dutch Edition. Materials: https://zenodo.org/records/19595096 (29 March - 2 April 2026, Schoorl, The Netherlands) <a href="https://zenodo.org/records/19595096" target="_blank" rel="noopener">link</a></li><li>OSPARK Bootcamp #2 (03 June 2026 - 25 July 2026, Online and in Munich, Germany) <a href="https://events.digital-research.academy/event/131/" target="_blank" rel="noopener">link</a><div class="note">Bootcamp edition 2 of 3</div></li><li>The OSPARK Bootcamp consists of a 6-week online course and a 2-day onsite workshop, with an iterative course design that responds to participant needs. The project organised three editions of the bootcamp.<div class="note">Bootcamp edition 3 of 3 (the project reports three editions); counted separately by decision of 5 Oct 2026</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-186</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">ParlaCAP - Comparing agenda settings across parliaments via the ParlaMint dataset</div>
+  <ul><li>Digital Humanities Conference 2025. Workshop: Darja Fišer, Anna Kryvenko, Kristina Pahor de Maiti Tekavčič: From the Dispatch Box - Unlocking Topics and Sentiments in Multilingual ParlaMint Corpora (14 July 2025) <a href="https://dh2025.adho.org/browse-the-program-agenda/" target="_blank" rel="noopener">link</a><span class="tag">taught a session</span></li><li>CDH/CLARIN Workshop in the CDH Training Programme. Training: Anna Kryvenko, Kristina Pahor de Maiti Tekavčič: ParlaMint – An introduction to Multilingual Parliamentary Data (20 November 2025) <a href="https://cdh.uu.nl/event/cdh-clarin-workshop-parlamint-an-introduction-to-multilingual-parliamentary-data/" target="_blank" rel="noopener">link</a><span class="tag">taught a session</span></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-214</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, SSHOC)">ENVRI / SSHOC</span>
+  </div>
+  <div class="proj-title">CASTAL - Case Studies Atlas of Local Sustainability Transition</div>
+  <ul><li>CASTAL webinar targeting SSH researchers on LST - local policy makers and stakeholders, national and European policymakers and stakeholders, and aimed at presenting the project and launching the Call for secondary studies (17 December 2025, Online) <a href="https://www.youtube.com/watch?v=-gW146Knt84" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-229</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">FAIRFUN4Biodiversity - FAIR AI models for functional annotation of biodiversity genomics resources</div>
+  <ul><li>Workshop on Genome Annotation. (5-9 May, 2025, Barcelona, Spain)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-284</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">EVA-FAIR - Implementing FAIR principles in the European Vegetation Archive data</div>
+  <ul><li>Two webinars and one full-day in-person training workshop<div class="note">Reported in the outputs; no separate event record</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-285</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">OpenCorrAM - Open Corrosion Data for Additively Manufactured Alloys</div>
+  <ul><li>Corrosion Science Institute Summer School (CSI-2025) (9-13 June, 2025, Western University, London, Canada, and online) <a href="https://www.uwo.ca/sci/correct/what-we-do/corrosion-science-institute.html" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-327</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">AMIS - Advanced Metadata Intelligent System</div>
+  <ul><li>The AMIS project will organise a dedicated workshop on metadata management and present the AMIS assistant application to the broader scholarly community at Humanistica 2026 (20-22 May 2026, Paris, France) <a href="https://humanistica2026.sciencesconf.org/" target="_blank" rel="noopener">link</a><div class="note">Held 20–22 May 2026 (source text written before the event)</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-348</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">OASIS - Open Audiovisual Science Innovation Scheme</div>
+  <ul><li>Seminar-Webinar series “Social issues, changes and power of video” - designed for students in the “Media Ecosystems” master&#x27;s programme, PhD students of the “Media, Images and Technologies” research team and members of the Canevas consortium. It prepares for social challenges linked to digital technologies and the ways in which videographic discourse circulated. (September-October, 2025, Paris, France and online)</li><li>OASIS webinar series for partners to present to a wider audience their research topics, video collections and methodologies. (From September 2025 to June 2026, Online)</li><li>Preconference workshop of the 5h DARIAH-HR International Conference Digital Humanities &amp; Heritage 2025 (21-22 October, 2025, Osijek, Croatia)</li><li>Closing workshops of the European OASIS project (October 2026, Maison des sciences de l’homme, Paris, France)<div class="note">Planned in the 24 Sept data (October 2026); counted by decision of 5 Oct 2026</div></li><li>Integrated into curricula of several French universities. training sessions on FAIR principles and the alternative web.<div class="note">Reported in D4.4 Impact Report; no separate event record</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-352</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">HOMEROS - Harmonising Observations from Multi-hazard Environments in Research for Open Science</div>
+  <ul><li>S³ School — Sustainable Scientific Software School (14-21 January 2026, Annecy, France) <a href="https://indico.in2p3.fr/event/36319/" target="_blank" rel="noopener">link</a><span class="tag">taught a session</span></li><li>Virtual laboratory in the NaaVRE platform for training postgraduate seismology students (Mar 2026)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-385</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">FAIRGamma - Contribution for the FAIRisation of Gammapy</div>
+  <ul><li>2nd Cherenkov Astronomy Data School - CADS 2025, funded by the Observatoire de Paris. 3 days of training on Gammapy was made (3-7 November 2025, Paris, France) <a href="https://indico.obspm.fr/event/2672/" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-394</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, LS-RI)">ENVRI / LS-RI</span>
+  </div>
+  <div class="proj-title">AQUANAVI: Navigating Grand Challenges and their Mitigation using Aquatic Experimental RIs</div>
+  <ul><li>WIKI workshop (17-19 October, 2025, Stechlin, Germany)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-428</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">LabID-PROV - Tracking and Sharing Data Provenance with RO-Crate in Lab Integrated Data</div>
+  <ul><li>3C-CoDash Hackathon. As part of this hackathon, Laurent Thomas co-organises a project around FAIR image data-management. The session illustrated the usage of LabID to track how images are converted to OME-Zarr as a workflow run, thus ensuring the provenance of the converted data is documented. (28-30 January 2026, EMBL Heidelberg, Germany) <a href="https://grp-bio-it.embl-community.io/hackathons/" target="_blank" rel="noopener">link</a></li><li>Internal training on the LabID workflow integration. The goal is to encourage adoption of the platform and by doing so improve the recording of provenance for derived data. (28-29 September 2026)<div class="note">Planned in the 24 Sept data (28–29 Sept 2026); counted by decision of 5 Oct 2026</div></li><li>LabID workshop - EMBL Heidelberg, open to externals - Focus of the workshop are the different concepts of LabID (studies, assay, samples) illustrated with concrete use-cases, as well as the newer features around workflows developed as part of LabID-PROV. (28-29 September 2026, Heldelberg, Germany)<div class="note">Planned in the 24 Sept data (28–29 Sept 2026); counted by decision of 5 Oct 2026</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-437</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE)">ENVRI / ESCAPE</span>
+  </div>
+  <div class="proj-title">OPAL - Ontology Portal for Astronomy Linked-data</div>
+  <ul><li>S³ School — Sustainable Scientific Software School (I. Bourouche) (14-21 January 2026, Annecy, France) <a href="https://indico.in2p3.fr/event/36319/" target="_blank" rel="noopener">link</a><span class="tag">taught a session</span></li><li>4th OntoPortal Workshop (organised event) - The OntoPortal workshop series is an annual community event organized within the framework of the OntoPortal Alliance, bringing together developers, data managers, ontology engineers, and domain experts to share experiences, present use cases, and discuss technical, governance, and sustainability aspects of OntoPortal-based semantic artefact catalogues. The workshops foster cross-domain collaboration, gather user feedback to guide platform evolution, and strengthen the international OntoPortal ecosystem supported by the Alliance (see https://ontoportal.org). (21-25 September 2026, Observatoire de Paris, Paris, France) <a href="https://ontoportal.org" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-452</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">MORCDA - Making Open Research Data Suitable for Comparative Discourse Analysis</div>
+  <ul><li>Start of K-centre: CLARIN Knowledge Centre for Applied Comparative Discourse Analysis (CLARIN-APPLIED) (2025). Ongoing knowledge transfer and community training via webinars, presentations, and workshops.<div class="note">Reported in the outputs; no separate event record</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-454</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">FSD - Federation of Solar Data</div>
+  <ul><li>FSD OSCARS Workshop to teach participants how data have to be formatted/prepared in order to be ‘ingestible&#x27; by astronomical VOs (following IVOA standards) and making use of the EPN-TAP protocol. (11 July, 2025, Online)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-479</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">ioChem-BD - Open-Data for Computational Chemistry and Materials Science</div>
+  <ul><li>Workshops at SBQT and with Brazilian research groups; training activities at DUT (Africa)<div class="note">Reported in the outputs; no separate event record</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">02-0997</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">MultiCellML-TDR - Standard and FAIR TDR for Computational Models of Multicellular Biological Systems</div>
+  <ul><li>Organised a workshop on modeling, simulation and repositories at the INFORMATICS Festival (theme &#x27;Digital Resilience&#x27;). co-organised peer-to-peer training sessions on repository infrastructures. <a href="https://tess.elixir-europe.org/events/morpheusml" target="_blank" rel="noopener">link</a><div class="note">Reported in D4.4 Impact Report; no separate event record</div></li></ul>
+</div></div>
+</section>
+
+<section class="tier-section">
+  <div class="tier-header" style="background:linear-gradient(135deg,#4463A0,#80519a)">
+    <div class="tier-tag">TIER 2</div>
+    <div class="tier-name">Tier 2 – Learning materials</div>
+    <div class="tier-desc">Tutorials, guides, user manuals, textbooks, recorded lectures and teaching notebooks</div>
+    <div class="tier-count">19 projects · 29 materials</div>
+  </div>
+  <div class="proj-grid"><div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-063</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">ONTOLISST - Thematic ontologies in social science research data</div>
+  <ul><li>Webinar Artificial Intelligence and metadata in social science (recording) <a href="https://www.sciencespo.fr/cdsp/fr/actualites/webinar-replay-artificial-intelligence-and-metadata-in-social-sciences/" target="_blank" rel="noopener">link</a><div class="note">Same entry as the Tier 1 webinar; the recording counts as learning material (decision of 12 Oct 2026)</div></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-069</span>
+    <span class="cluster-pill" style="background:#4463A0" title="Cross-Domain (ESCAPE, Other)">ESCAPE / Other</span>
+  </div>
+  <div class="proj-title">Astro-CC - Astronomy Open Science Competence Centre Pilot</div>
+  <ul><li>All the materials from the two completed Community Competence Centre events are available on the event pages, including Python notebook tutorials that can be adapted to different research projects. <a href="https://indico.in2p3.fr/event/36738/" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-073</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE, LS-RI)">ENVRI / ESCAPE+</span>
+  </div>
+  <div class="proj-title">FIESTA - FAIR image analysis across sciences</div>
+  <ul><li>First cross-disciplinary tutorial available <a href="https://training.galaxyproject.org/training-material/topics/imaging/tutorials/voronoi-segmentation/tutorial.html" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-124</span>
+    <span class="cluster-pill" style="background:#37277c" title="PaNOSC">PaNOSC</span>
+  </div>
+  <div class="proj-title">VISA - User experience enhancement</div>
+  <ul><li>Documentation <a href="https://visa.readthedocs.io" target="_blank" rel="noopener">link</a><span class="tag">user guide / manual</span></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-168</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">PNU-OpenLab - Advanced Materials Open Science Centre at the Precarpathian National University</div>
+  <ul><li>PNU-DataSet User Manual <a href="https://dataset.cnu.edu.ua/records/zfgee-r2c97" target="_blank" rel="noopener">link</a><span class="tag">user guide / manual</span></li><li>CNU-NanoLab. Experimental methods <a href="https://dataset.cnu.edu.ua/records/p1hfm-zp711" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-177</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE, LS-RI, PaNOSC, SSHOC, Other)">ENVRI / ESCAPE+</span>
+  </div>
+  <div class="proj-title">OSPARK - Open Science Promotion and Advocacy for Research Knowledge Bootcamp</div>
+  <ul><li>How to get started with Mastodon / LinkedIn / Bluesky (a guide for Open Science initiatives) <a href="https://doi.org/10.5281/zenodo.17142163" target="_blank" rel="noopener">link</a></li><li>How to choose the right social media platform (a guide for Open Science initiatives) <a href="https://doi.org/10.5281/zenodo.17141918" target="_blank" rel="noopener">link</a></li><li>Workbooks <a href="https://doi.org/10.5281/zenodo.17093483" target="_blank" rel="noopener">link</a></li><li>Promote Your Initiative or Service - OSPARK Workshop for Research Support Services and Open Science Initiatives <a href="https://doi.org/10.5281/zenodo.17097989" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-186</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">ParlaCAP - Comparing agenda settings across parliaments via the ParlaMint dataset</div>
+  <ul><li>Parliamentary Speech Analysis with ParlaCAP (GitHub) <a href="https://github.com/clarinsi/ParlaCAP-Analysis-Tutorials/tree/main" target="_blank" rel="noopener">link</a></li><li>Guide for Automatic CAP Annotation of ParlaMint Data</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-204</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">DraCorOS. Fostering Open Science in Digital Humanities by connecting the “DraCor” Ecosystem to EOSC</div>
+  <ul><li>A collection of tutorials to get you started with the DraCor API. <a href="https://github.com/dracor-org/dracor-notebooks" target="_blank" rel="noopener">link</a></li><li>DraCor Textbook (Open Educational Resource) <a href="https://doi.org/10.5281/zenodo.22297120" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-285</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">OpenCorrAM - Open Corrosion Data for Additively Manufactured Alloys</div>
+  <ul><li>Outreach event - Video recordings <a href="https://youtu.be/tsb2vcjFD-4?si=iZdDv-SLZVAGEmLx" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-314</span>
+    <span class="cluster-pill" style="background:#37277c" title="PaNOSC">PaNOSC</span>
+  </div>
+  <div class="proj-title">CDIF-4-XAS - Describing X-Ray Spectroscopy Data for Cross-Domain Use</div>
+  <ul><li>DOI: Tutorials and training materials for Galaxy tool adoption at STFC and usegalaxy.eu.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-349</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">ARTICYST - Devising Open Science practices to promote research and treatment in cystic kidney disease</div>
+  <ul><li>Cookbooks: building data dictionaries; data integration from external centres and hospital information systems</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-352</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">HOMEROS - Harmonising Observations from Multi-hazard Environments in Research for Open Science</div>
+  <ul><li>Virtual laboratory tutorials and user documentation for seismology training</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-354</span>
+    <span class="cluster-pill" style="background:#80519a" title="Cross-Domain (LS-RI, PaNOSC)">LS-RI / PaNOSC</span>
+  </div>
+  <div class="proj-title">mTeSS-X - Scaling training portal federation for RIs through Multi-tenanting and Exchange</div>
+  <ul><li>mTeSS-X Deliverable D4: Documentation <a href="https://doi.org/10.5281/zenodo.18834180" target="_blank" rel="noopener">link</a><span class="tag">user guide / manual</span></li><li>TeSS Platform documentation <a href="https://elixirtess.github.io/docs/" target="_blank" rel="noopener">link</a><span class="tag">user guide / manual</span></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-377</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">FASCA - Facilitating Scholarly Communication Analysis through GoTriple Pipeline</div>
+  <ul><li>Beginner&#x27;s guide to the Data Science Toolbox</li><li>Example Jupyter notebooks (ready-to-use templates)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-421</span>
+    <span class="cluster-pill" style="background:#80519a" title="Cross-Domain (LS-RI, PaNOSC)">LS-RI / PaNOSC</span>
+  </div>
+  <div class="proj-title">HEFTIE - Handling Enormous Files from Tomographic Imaging Experiments</div>
+  <ul><li>The HEFTIE Textbook <a href="https://heftie-textbook.readthedocs.io" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-428</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">LabID-PROV - Tracking and Sharing Data Provenance with RO-Crate in Lab Integrated Data</div>
+  <ul><li>LabID — Lab Integrated Data platform <a href="https://grp-gbcs.embl-community.io/labid-user-docs/" target="_blank" rel="noopener">link</a><span class="tag">user guide / manual</span></li><li>LabID demo instance <a href="https://labid-demo.embl.de/home" target="_blank" rel="noopener">link</a></li><li>LabID tutorials (training section of the documentation) <a href="https://grp-gbcs.embl-community.io/labid-user-docs/training/" target="_blank" rel="noopener">link</a></li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-475</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">FAIR-EO - FAIR, Open and AI-Ready Earth Observation Resources</div>
+  <ul><li>GitHub toolbox with tutorials for loading EO data, training AI models, and running analysis workflows.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-479</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">ioChem-BD - Open-Data for Computational Chemistry and Materials Science</div>
+  <ul><li>Tutorials and educational videos (YouTube)</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">02-1521</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">FLEX4HEALTH: scaling Federated Learning and EXchange of cohort study research for Health ESFRIs.</div>
+  <ul><li>Training materials disseminated through ELIXIR TeSS. open-source tools and demonstrator projects for federated health data analysis training across BBMRI, ELIXIR, and EIRENE.</li></ul>
+</div></div>
+</section>
+
+<section class="tier-section">
+  <div class="tier-header" style="background:linear-gradient(135deg,#80519a,#9E559D)">
+    <div class="tier-tag">TIER 3</div>
+    <div class="tier-name">Tier 3 – Capacity building</div>
+    <div class="tier-desc">Skills development, knowledge transfer, and team / community capability growth</div>
+    <div class="tier-count">54 projects · 54 survey answers</div>
+  </div>
+  <div class="proj-grid"><div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-008</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">NAPMIX - Nuclear, Astro, and Particle Metadata Integration for eXperiments</div>
+  <ul><li>Yes, the project strengthened expertise in advanced metadata modelling, FAIR implementation at the technical level, persistent identifier integration, and schema versioning strategies.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-025</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">EHRI-KG - European Holocaust Research Infrastructure: Knowledge Graph</div>
+  <ul><li>It helped to build a better understanding of semantic technologies and the use of AI to solve some of the challenges.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-055</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, LS-RI)">ENVRI / LS-RI</span>
+  </div>
+  <div class="proj-title">RISKY - Wildlife Mortality from Energy and Transport Infrastructure</div>
+  <ul><li>Yes. The project significantly contributed to building new skills and capacities within both the research community and among practitioners. By integrating diverse wildlife mortality datasets into a unified framework, it enabled users to work with information more effectively. The development of user-friendly analytical tools lowered technical barriers, allowing researchers who are not proficient in coding to explore, analyse, and interpret data independently and supports users in formulating and testing new hypotheses, fostering more advanced analytical thinking. This approach makes the project particularly inclusive and accessible, broadening participation across disciplines and expertise levels. In addition, the generation of sensitivity maps also strengthen the capacity of decision-makers and infrastructure planners by providing clear, evidence-based insights. This facilitates more informed and wildlife-friendly planning and mitigation strategies, ultimately supporting better integration of biodiversity considerations into transport infrastructure development.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-063</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">ONTOLISST - Thematic ontologies in social science research data</div>
+  <ul><li>The project strengthened our skills in AI‑based text classification and metadata harmonisation.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-069</span>
+    <span class="cluster-pill" style="background:#4463A0" title="Cross-Domain (ESCAPE, Other)">ESCAPE / Other</span>
+  </div>
+  <div class="proj-title">Astro-CC - Astronomy Open Science Competence Centre Pilot</div>
+  <ul><li>The Astro-CC training events are designed to help Ph.D students and early career researchers to build their skills in data sharing and the use of interoperable tools. The participants are also encouraged to take on ambassador roles when they return to their home institutes, and to show their colleagues what they have learned.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-073</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE, LS-RI)">ENVRI / ESCAPE+</span>
+  </div>
+  <div class="proj-title">FIESTA - FAIR image analysis across sciences</div>
+  <ul><li>Yes, we&#x27;re now more aware of the need of having annotations for tools, workflows and tutorials that are not specific to a community so that they can be reused. We learned how to create FAIR Implementation Profiles.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-076</span>
+    <span class="cluster-pill" style="background:#37277c" title="Cross-Domain (PaNOSC, Other)">PaNOSC / Other</span>
+  </div>
+  <div class="proj-title">Findable Big Data from Various Material Characterisation Techniques</div>
+  <ul><li>In our communities, we have already worked with ontologies (PaNET and NeXus), but this project shined new sides, and made us profficient in developping ontology concepts and their realtionships.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-080</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">COPLI - Creating a FAIR Open Science Pipeline for high-resolution LOFAR Imaging</div>
+  <ul><li>Most aspects around FAIR</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-124</span>
+    <span class="cluster-pill" style="background:#37277c" title="PaNOSC">PaNOSC</span>
+  </div>
+  <div class="proj-title">VISA - User experience enhancement</div>
+  <ul><li>Web, which we developed, provides an alternative to current remote desktop solutions.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-154</span>
+    <span class="cluster-pill" style="background:#37277c" title="PaNOSC">PaNOSC</span>
+  </div>
+  <div class="proj-title">AI-SCOPE - AI-Driven Enhancement of Surface Scattering Data for Open Science Platforms Across Europe</div>
+  <ul><li>Enhanced awarness and skills regarding data search in synchrotron databases and the EOSC. New workflow for analysing grazing incidence diffraction data. Employing automated reflectometry fits at beamlines.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-167</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">FAIRification of IsoSeq Evidence-driven annotation of the biodiversity</div>
+  <ul><li>Yes, it has helped my team understand the importance of FAIR software development and creating a set of teaching resources for the community</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-168</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">PNU-OpenLab - Advanced Materials Open Science Centre at the Precarpathian National University</div>
+  <ul><li>Team members developed a clearer understanding of what Open Science means in day-to-day research work and why it matters, we improved our capacity in FAIR-oriented data handling and research documentation, learned how to structure datasets, describe them with consistent metadata, prepare clear methodological documentation, and link data, protocols, and supporting code in a way that other researchers can reuse.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-173</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">ASTRO-DM TSP - The Astronomy Dark Matter Test Science Project</div>
+  <ul><li>Yes, entirely as described in the proposal</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-177</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE, LS-RI, PaNOSC, SSHOC, Other)">ENVRI / ESCAPE+</span>
+  </div>
+  <div class="proj-title">OSPARK - Open Science Promotion and Advocacy for Research Knowledge Bootcamp</div>
+  <ul><li>Yes - our whole project is around training and capacity building.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-186</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">ParlaCAP - Comparing agenda settings across parliaments via the ParlaMint dataset</div>
+  <ul><li>Yes, especially in developing speech to text models.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-204</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">DraCorOS. Fostering Open Science in Digital Humanities by connecting the “DraCor” Ecosystem to EOSC</div>
+  <ul><li>The development of the MCP (Model Context Protocol) server integration required the team to develop expertise in emerging LLM integration technologies, expanding our technical skill set beyond traditional digital humanities infrastructure into AI-enhanced research workflows.
+Organizing the DraCor Summit and developing training materials (DraCorOS sessions, the DraCor Textbook) strengthened our capacities in pedagogical design and community facilitation. 
+Establishing and maintaining the Mattermost community platform developed skills in sustaining digital research communities and managing collaborative feedback processes, moving beyond tool development toward ecosystem cultivation.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-214</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, SSHOC)">ENVRI / SSHOC</span>
+  </div>
+  <div class="proj-title">CASTAL - Case Studies Atlas of Local Sustainability Transition</div>
+  <ul><li>The project strengthened the interaction and collaboration capabilities (co-design, co-evaluation) between social researchers and digital archives experts within the consortium.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-222</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">PRIVAGAMS - Services for Privacy Advancement through Generative AI and Model Sanitization</div>
+  <ul><li>Yes, the project strengthened our expertise in diffusion-based synthetic data generation and privacy-preserving model development. It also enhanced our capacity to train and evaluate large AI models on high-performance computing (HPC) infrastructures.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-229</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">FAIRFUN4Biodiversity - FAIR AI models for functional annotation of biodiversity genomics resources</div>
+  <ul><li>Yes, they have increase the adoption of FAIR measures while developing the tools to address research questions.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-247</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">Opravidlo 2.0 – Public Online Proofreading Service</div>
+  <ul><li>Certainly, we have young researchers on our team for whom involvement in the project is new. They see how an interdisciplinary team works.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-278</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, LS-RI, PaNOSC)">ENVRI / LS-RI+</span>
+  </div>
+  <div class="proj-title">AMBCAT - Digital Amber Catalogue</div>
+  <ul><li>Learned and gathered experience about streaming data formats and tools for web-gl based image rendering</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-284</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">EVA-FAIR - Implementing FAIR principles in the European Vegetation Archive data</div>
+  <ul><li>We learned new methods of data publishing, in particular GitHub webpage scheme nad GBIF data standards.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-285</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">OpenCorrAM - Open Corrosion Data for Additively Manufactured Alloys</div>
+  <ul><li>The project has helped us to better understand the issues of data sharing and FAIR data within our field, and has provided us vocabulary to further involve important players in the field in this initiative.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-314</span>
+    <span class="cluster-pill" style="background:#37277c" title="PaNOSC">PaNOSC</span>
+  </div>
+  <div class="proj-title">CDIF-4-XAS - Describing X-Ray Spectroscopy Data for Cross-Domain Use</div>
+  <ul><li>We were happy to learn about metadata mapping, specially using CDIF to create mappers and validators for standardised data</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-327</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">AMIS - Advanced Metadata Intelligent System</div>
+  <ul><li>Yes, the project is helping build new skills and capacities within our team and community. Young developers receive hands-on training, gaining practical experience with data management, APIs, metadata standards, and working with large language models (LLMs) for data analysis and information extraction. 
+At the same time, our research team makes progress on key research questions, improves workflows, and deepens their understanding of the opportunities and challenges associated with LLMs. Overall, the project fosters both technical skills and research capacities, strengthening the team’s ability to work effectively on FAIR data and Open Science objectives.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-345</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">Open and FAIR Integrated Phenology Monitoring System</div>
+  <ul><li>Absolutely yes, to link research and SME and potentially open to a new diffuse data stream particularly valuable</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-348</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">OASIS - Open Audiovisual Science Innovation Scheme</div>
+  <ul><li>We have developed strong expertise in organizing workshops at the international level. We first had to promote the event within a specific scientific community, namely that of the host country, and then share our research methodology and epistemological framework with a community that was unfamiliar with open science and video annotation tools.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-349</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">ARTICYST - Devising Open Science practices to promote research and treatment in cystic kidney disease</div>
+  <ul><li>data modelling, automated ETL including translation, validation and harmonization with Python</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-352</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">HOMEROS - Harmonising Observations from Multi-hazard Environments in Research for Open Science</div>
+  <ul><li>Yes, the research team members are now skilled in preparing DMPs, working with Jupyter Notebooks, and openly sharing databases.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-354</span>
+    <span class="cluster-pill" style="background:#80519a" title="Cross-Domain (LS-RI, PaNOSC)">LS-RI / PaNOSC</span>
+  </div>
+  <div class="proj-title">mTeSS-X - Scaling training portal federation for RIs through Multi-tenanting and Exchange</div>
+  <ul><li>The project has greatly assisted us in bringing our two communities, Life Science and PaNOSC, together and establishing a sustainable federated ecosystem that helps us achieve more collectively.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-358</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">GASPS - Gaia All-Sky Parameters for Stars Service</div>
+  <ul><li>Yes: enhancement of working with large datasets, software publishing and online interoperation of data services.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-373</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">FAIRMD - Disorder to Order: Streamlining Biomolecule Simulation Re-Use with FAIR NMRlipids database</div>
+  <ul><li>Yes. The expertise provided by Elixir Norway with existing public databases has helped on improving the interoperability of NMRlipids Databank.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-374</span>
+    <span class="cluster-pill" style="background:#37277c" title="Cross-Domain (PaNOSC, SSHOC)">PaNOSC / SSHOC</span>
+  </div>
+  <div class="proj-title">SHARE - Synchrotron x-ray analysis of Heritage Accessible to and Reusable by Everyone</div>
+  <ul><li>so far, better definition and collection of samples, techniques and data metadata.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-382</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">Implementing FAIRness in structure-based drug design through Fragalysis Cloud</div>
+  <ul><li>Absolutely, this project seeded automated data-processing pipelines for processing high-throughout crystallography data at Diamond Light Source. The potential impact is significant, with pipes now being formalised for both processing (automated water modelling and ligand-fitting) and subsequent data-preparation for deposition to both Fragalysis and public repositories like the PDBe.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-385</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">FAIRGamma - Contribution for the FAIRisation of Gammapy</div>
+  <ul><li>Yes, on data formating, provenance, skills on pyvo</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-390</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">RSOTC - The Regional State of the Climate dashboard</div>
+  <ul><li>The project has enabled us to gain experience in standards such as Research Object Crate (RO-Crate).</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-394</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, LS-RI)">ENVRI / LS-RI</span>
+  </div>
+  <div class="proj-title">AQUANAVI: Navigating Grand Challenges and their Mitigation using Aquatic Experimental RIs</div>
+  <ul><li>Definitely: While the EU-RI network projects (MESOAQUA, AQUACOSM and AQUACOSM-plus) have worked actively to harmonise vocabularies between different historically divided aquatic scientific fields from freshwater to the open ocean and made the data from these entities much more FAIR, the present project AQUANAVI offers a step change by combining high level visualisation and data mining with the Hi Knowledge concept, providing access to knowledge via the open knowledge graph Wikidata.This project thus has initiated a new dimension of harmonization and enhanced accessibility of data by combining leading fields in a win-win situation with a substantial potential of increased FAIRification. On the level of the team members, this new collaborations and exchange also led to increases in competencies for all involved partners.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-407</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">MADDEN - Multi-RI Access and Discovery of Data for Experiment Networking</div>
+  <ul><li>yes, programming skills</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-415</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">HarDIS - Harmony in the Democratic Ideological Space</div>
+  <ul><li>Yes, within my team, but the team is only temporary. We have made use of OSCARS workshops.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-426</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">ETAP - Einstein Telescope Analysis Portal</div>
+  <ul><li>Yes definitely!  In particular, experience with kubernetes, containers and helm charts for packaging and deployment, together with flux/skaffold for deployment tools and IaC.  All of the components of ETAP (Rucio, REANA, Indigo IAM) are key components of modern solutions and we were able to involve more experts at UniGe in using these tools and increase awareness.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-428</span>
+    <span class="cluster-pill" style="background:#80519a" title="LS-RI">LS-RI</span>
+  </div>
+  <div class="proj-title">LabID-PROV - Tracking and Sharing Data Provenance with RO-Crate in Lab Integrated Data</div>
+  <ul><li>The project involved getting familiar with the RO-Crate specifications, and the ontology used by those specifications. It also contributed to getting the researchers at our institute more familiar with workflow management, as well as open image formats such as ome-zarr.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-436</span>
+    <span class="cluster-pill" style="background:#37277c" title="PaNOSC">PaNOSC</span>
+  </div>
+  <div class="proj-title">MC-ReDD - Metadata Capture and validation for Re-use of raw Diffraction Data</div>
+  <ul><li>Clearly the team could mutually gain insight in existing software libraries, foster coding skills and complement with scientific domain knowledge.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-437</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, ESCAPE)">ENVRI / ESCAPE</span>
+  </div>
+  <div class="proj-title">OPAL - Ontology Portal for Astronomy Linked-data</div>
+  <ul><li>Of course, new expertise in OntoPortal-related semantic artefact management within the OBS team.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-452</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">MORCDA - Making Open Research Data Suitable for Comparative Discourse Analysis</div>
+  <ul><li>Capacity: https://clarin-applied.zhaw.ch/; New skills in better understanduing of (1) inequality of data sets; (2) standardisation as a problem rather than a solution; (3) understanding of comparison as practice; (4) adaptation of corpus platforms to user-friendliness; (5) urgent need to develop corpus linguistic tools for comparative analysis</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-454</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">FSD - Federation of Solar Data</div>
+  <ul><li>Yes, we gained experience in implementing SOLARNET standards and harmonizing our datasets. For many partners, the adaptation and standardization of observational data posed significant challenges.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-466</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">GOYAS - Geospatial Open-science Yielding ApplicationS: innovative and FAIR remote-sensing data</div>
+  <ul><li>Yes, we help data producers to improve their knowledge about FAIR principles and how they can adopt them</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-475</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="ENVRI">ENVRI</span>
+  </div>
+  <div class="proj-title">FAIR-EO - FAIR, Open and AI-Ready Earth Observation Resources</div>
+  <ul><li>Yes, the project significantly built new skills and capacities within the team and in collaboration with the Jožef Stefan Institute:
+- Advanced AI/ML in EO: Deepened expertise in applying sophisticated computer vision and machine learning to Earth Observation challenges.
+- Semantic data annotation: Acquired skills in ontology and semantics for standardizing heterogeneous EO data.
+- Improved software interoperability: Developed capacity for integration and standardization (AiTLAS toolbox) to address algorithm fragmentation.
+- Applied FAIR principles: Strengthened practical skills in open science and applying FAIR standards to datasets and models.
+- User-centric solutions: Enhanced capacity to use user feedback for targeted development, including new datasets for specific downstream tasks and standardized benchmarks.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-479</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">ioChem-BD - Open-Data for Computational Chemistry and Materials Science</div>
+  <ul><li>Yes, the project significantly contributed to building new skills and capacities within both the team and the user community. Project management activities, based on the KANBAN methodology in combination with Gantt charts, have enhanced team coordination, task prioritization, and overall workflow planning. In parallel, the need to actively communicate with users through social media channels (LinkedIn, X, and YouTube) has strengthened the team’s communication, outreach, and science dissemination skills. The project also supported targeted professional development within the team: team members completed formal training in project management and innovation, including a project management course at BIST and the From Science to Business program. In addition, the technical team acquired new skills related to the development and implementation of access control lists (ACLs), improving the platform’s security and user management capabilities. Beyond internal capacity building, the project also strengthened the skills of the broader community through hands-on webinars and training sessions, aimed at enabling users to effectively adopt and use the platform within their research workflows.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-491</span>
+    <span class="cluster-pill" style="background:#37277c" title="PaNOSC">PaNOSC</span>
+  </div>
+  <div class="proj-title">PaN-Finder - Photon and Neutron federated knowledge finder</div>
+  <ul><li>Yes. We have expanded the knowledge about AI tools, how and when to use them, how to prompt the system to express the correct intention. We also increased our knowledge on data quality, how to improve it and spot trends in the open data collected for the project.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">01-507</span>
+    <span class="cluster-pill" style="background:#37277c" title="PaNOSC">PaNOSC</span>
+  </div>
+  <div class="proj-title">MatScatNet - A Cloud Database for Sharing X-ray &amp; Neutron Scattering Data for Materials Research</div>
+  <ul><li>Creating a scaleable platform for data dissemination.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">02-0717</span>
+    <span class="cluster-pill" style="background:#4463A0" title="ESCAPE">ESCAPE</span>
+  </div>
+  <div class="proj-title">UpGLADE: community-driven open-data infrastructure for gravitational-wave cosmology</div>
+  <ul><li>Hiring a research engineer to work with us is a huge improvement and fills in the critical knowledge gaps we would have otherwise</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">02-0725</span>
+    <span class="cluster-pill" style="background:#9E559D" title="SSHOC">SSHOC</span>
+  </div>
+  <div class="proj-title">ERIHAD.OS - OS Ethical Research Infrastructure for Hateful, Antidemocratic, and Discriminatory Data</div>
+  <ul><li>The project is already driving capacity development at the team level. Coordinating a cross-national consortium spanning Germany, Spain, and Greece (with partners from research, civil society, and the technology sector) is building practical expertise in federated governance, ethical data management, and EOSC integration that did not previously exist in consolidated form within our institutions. We also anticipate that the co-creation process with NGO and observatory partners will build Open Science literacy within civil society organisations that have not previously engaged with EOSC tools or FAIR principles.</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">02-0827</span>
+    <span class="cluster-pill" style="background:#2FA0DB" title="Cross-Domain (ENVRI, SSHOC)">ENVRI / SSHOC</span>
+  </div>
+  <div class="proj-title">PREDICT – Platform for REsilient Data Integration and Coordinated Forecasting Tools</div>
+  <ul><li>yes, a better understanding of data science</li></ul>
+</div>
+<div class="proj-card">
+  <div class="proj-header">
+    <span class="proj-id">02-0953</span>
+    <span class="cluster-pill" style="background:#7f7f80" title="Other">Other</span>
+  </div>
+  <div class="proj-title">HYDRA - FAIR Open Infrastructure for Modelling Hydrogen Storage &amp; Rare-Earth Magnetic Materials</div>
+  <ul><li>Yes. The project has strengthened our team’s capacities in FAIR data implementation, research data management, and open science practices, particularly in relation to EOSC alignment and metadata standardisation.</li></ul>
+</div></div>
+</section>
+
+<footer>OSCARS project · Horizon Europe Grant No. 101129751 · Data: 12 October 2026 (Events and Outputs sheets of the OSCARS projects workbook; final survey)</footer>
+</body>
+</html>
